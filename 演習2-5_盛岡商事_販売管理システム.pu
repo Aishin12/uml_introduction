@@ -1,0 +1,12 @@
+@startuml 盛岡商事_販売管理システム
+left to right direction
+
+actor 田中さん#DDDDDD;line:black;line.bold;
+actor 鈴木さん#000000;line:black;line.bold;
+rectangle 販売管理システム{
+    usecase 注文商品を確認する
+    usecase システムに登録する
+}
+田中さん --> 注文商品を確認する
+鈴木さん --> システムに登録する
+@enduml
