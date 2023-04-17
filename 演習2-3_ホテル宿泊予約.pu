@@ -1,0 +1,11 @@
+@startuml ホテル宿泊予約
+ left to right direction
+ actor 宿泊客#DDDDDD;line:black;line.bold;
+ rectangle ホテル宿泊{
+    usecase 予約
+    usecase ログイン
+
+ }
+    宿泊客 --> 予約
+    ログイン<.予約 : << include >>
+@enduml
