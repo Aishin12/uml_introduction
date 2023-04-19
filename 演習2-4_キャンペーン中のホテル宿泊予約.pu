@@ -1,11 +1,11 @@
 @startuml キャンペーン
 actor 宿泊客#DDDDDD;line:black;line.bold;
  rectangle ホテル宿泊予約{
-    usecase (<u>キャンペーン</u>\n拡張点\nキャンペーン価格) as input
-    usecase 予約
+    usecase キャンペーン
+    usecase (<u>予約</u>\n拡張点\nキャンペーン価格) as input
     usecase  ログイン
  }
-    予約 <. input : <<extend>>
-    宿泊客 --> 予約
-    ログイン<.予約 : << include >>
+    input <. キャンペーン: <<extend>>
+    宿泊客 --> input
+    ログイン<.input : << include >>
 @enduml
