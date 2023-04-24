@@ -1,0 +1,16 @@
+@startuml ATMシステム
+left to right direction
+actor 利用者#DDDDDD;line:black;line.bold;
+actor ATM#DDDDDD;line:black;line.bold;
+rectangle ATM引き出しシステム{
+    usecase 本人認証をする
+    usecase 金額を指定する
+    usecase 両替する
+    usecase (<u>預金を引き出す<u>\n拡張点\n金種を指定する) as input
+}
+本人認証をする<. input: << include >>
+本人認証をする <-- ATM
+利用者 --> 本人認証をする
+利用者 --> input
+(両替する) .> input: <<extend>>
+金額を指定する .> input: << include >>
