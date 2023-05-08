@@ -1,0 +1,20 @@
+@startuml ラーメン屋での注文
+actor 客 as guest
+participant ":フロア店員" as cleck
+participant ":料理人" as cocker
+
+activate guest
+guest -> cleck:ラーメンを注文する
+activate cleck
+cleck -> cocker:料理を指示する
+activate cocker
+cocker -> cocker:料理をする
+cleck <<-- cocker:ラーメン
+deactivate cocker
+deactivate cleck
+guest <<-- cleck:ラーメン
+deactivate guest
+
+
+
+@enduml
