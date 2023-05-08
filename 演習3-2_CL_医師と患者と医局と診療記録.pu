@@ -1,0 +1,21 @@
+@startuml 診療記録
+class "医師" as Physician {
+---
+}
+
+class "担当医" as AssignedPhysician {
+---
+}
+
+class "患者" as Patient {
+---
+}
+
+
+note left of Physician:雇用者
+note left of AssignedPhysician:従業員
+Physician "1" -down- "*" AssignedPhysician
+AssignedPhysician "1" -ri- "1"Patient:担当する >
+
+
+@enduml
