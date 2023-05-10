@@ -1,18 +1,19 @@
 @startuml ラーメン屋での注文
+hide footbox
 actor 客 as guest
-participant ":フロア店員" as cleck
+participant ":フロア店員" as clerk
 participant ":料理人" as cocker
 
 activate guest
-guest -> cleck:ラーメンを注文する
-activate cleck
-cleck -> cocker:料理を指示する
+guest -> clerk:ラーメンを注文する
+activate clerk
+clerk -> cocker:料理を指示する
 activate cocker
 cocker -> cocker:料理をする
-cleck <<-- cocker:ラーメン
+clerk <<-- cocker:ラーメン
 deactivate cocker
-deactivate cleck
-guest <<-- cleck:ラーメン
+deactivate clerk
+guest <<-- clerk:ラーメン
 deactivate guest
 
 
