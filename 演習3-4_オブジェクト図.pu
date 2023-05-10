@@ -1,19 +1,16 @@
 @startuml オブジェクト図
 left to right direction
 object "<u>プリウス:車</u>" as c1 {
+    タイヤ = 4本
 }
 
 object "<u>左前輪:タイヤ</u>" as w1 {
-
 }
 object "<u>左後輪:タイヤ</u>" as w2 {
-
 }
 object "<u>右前輪:タイヤ</u>" as w3 {
-
 }
 object "<u>右後輪:タイヤ</u>" as w4 {
-
 }
 
 c1 -- w1

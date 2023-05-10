@@ -2,12 +2,14 @@
 left to right direction
 
 class 車{
+    - タイヤ
 ---
 }
 
 class タイヤ{
+
 ---
 }
 
-車 "1" *-- "*" タイヤ
+車 "1" *-- "4" タイヤ
 @enduml
