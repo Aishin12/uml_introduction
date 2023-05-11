@@ -1,0 +1,15 @@
+@startuml 予約画面シーケンス図
+hide footbox
+participant "user:利用者" as user
+participant ":予約画面" as reserve 
+
+activate user
+    user -> reserve : 1:ログインメッセージ送信()
+activate reserve
+    reserve -> reserve : 2:認証する()
+    activate reserve
+deactivate reserve
+
+deactivate user
+
+@endumld
