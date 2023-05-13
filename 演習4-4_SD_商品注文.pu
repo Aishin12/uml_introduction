@@ -20,8 +20,8 @@ deactivate boundary
 
 
 owner -> boundary:注文操作を呼び出す(注文情報)
-deactivate owner
 activate boundary
+deactivate owner
         create order
             boundary -->> order:<<create>>
             activate order
