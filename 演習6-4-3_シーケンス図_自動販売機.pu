@@ -1,0 +1,20 @@
+@startuml 自動販売機システム
+Actor 客 as user
+hide footbox
+participant ":料金装置" as toll
+participant ":ボタン" as button
+participant ":ベンダー装置" as vendor
+
+
+user -> toll :　料金を入れる
+activate toll
+toll -> button : ボタンを押す
+activate button
+button -> vendor : ドリンクを要求する
+deactivate toll
+deactivate button
+
+activate vendor
+vendor -> user : ドリンクを運ぶ
+
+@enduml
