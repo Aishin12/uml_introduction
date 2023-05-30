@@ -1,9 +1,10 @@
 @startuml 注文
-object "<u>高橋洋平さん:顧客</u>" as c1{
+object "<u>高橋洋平さん:重要顧客</u>" as c1{
 }
 object "<u>髙田理恵さん:顧客</u>" as c2{
 }
-
+object "<u>大坪直之さん:顧客</u>" as c3{
+}
 
 object "<u>注文1:注文</u>" as o1{
     注文日 = 11月21日
@@ -18,13 +19,16 @@ object "<u>注文3:注文</u>" as o3{
     数量 = 1台
 }
 
-object "<u>テレビ:商品</u>" as p1{
+object "<u>東芝TH-355:テレビ/u>" as p1{
     型式 = V12345
 }
-object "<u>冷蔵庫:商品</u>" as p2{
+object "<u>日立MR-c33:商品</u>" as p2{
     型式 = R8765
 }
 
+object "<u>EPSON EB-685W:商品</u>" as p3{
+    型式 = R8765
+}
 c1 -- o1
 c1 -- o2
 c2 -- o3
